@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Employee Salary System</h3>
+
+<input id="name" placeholder="Name">
+<input id="id" placeholder="ID">
+<input id="salary" placeholder="Salary">
+<input id="dept" placeholder="Department">
+
+<button onclick="addEmp()">Add</button>
+<button onclick="show()">Display</button>
+<button onclick="total()">Total Salary</button>
+<button onclick="avg()">Average Salary</button>
+
+<p id="out"></p>
+
+<script>
+
+let emp=[];
+
+function addEmp(){
+let n=name.value;
+let i=id.value;
+let s=Number(salary.value);
+let d=dept.value;
+
+emp.push({n,i,s,d});
+out.innerHTML="Employee Added";
+}
+
+function show(){
+let t="";
+emp.forEach(e=>{
+t+=e.n+" "+e.i+" "+e.s+" "+e.d+"<br>";
+});
+out.innerHTML=t;
+}
+
+function total(){
+let sum=0;
+emp.forEach(e=>sum+=e.s);
+out.innerHTML="Total Salary: "+sum;
+}
+
+function avg(){
+let sum=0;
+emp.forEach(e=>sum+=e.s);
+out.innerHTML="Average Salary: "+sum/emp.length;
+}
+
+</script>
+
+</body>
+</html>
