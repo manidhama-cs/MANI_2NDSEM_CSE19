@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Student Result Calculator</h2>
+
+<label>Enter Subject Marks:</label>
+<input type="number" id="subjectMarks" placeholder="Enter marks out of 100">
+<br><br>
+
+<button onclick="calculateResult()">Calculate Result</button>
+
+<h3 id="output"></h3>
+</body>
+<script>
+
+let marks = prompt("Enter subject marks:");
+
+let result;
+let grade;
+
+if (marks >= 40) {
+    result = "Pass";
+} else {
+    result = "Fail";
+}
+
+if (marks >= 90) {
+    grade = "A";
+}
+else if (marks >= 75) {
+    grade = "B";
+}
+else if (marks >= 60) {
+    grade = "C";
+}
+else if (marks >= 40) {
+    grade = "D";
+}
+else {
+    grade = "F";
+}
+
+alert("Result: " + result + "\nGrade: " + grade);
+
+</script>
+
+</body>
+</html>
